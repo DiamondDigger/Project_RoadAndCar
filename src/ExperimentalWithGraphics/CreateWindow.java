@@ -9,9 +9,8 @@ public class CreateWindow extends JFrame {
         super(s);
         setLayout(null);
         setTitle("CurrentWindow");
-        setCursor(Cursor.getPredefinedCursor(3));
         setSize(800, 800);
-        setExtendedState(3);
+        setCursor(Cursor.getPredefinedCursor(1));
         setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -23,5 +22,4 @@ public class CreateWindow extends JFrame {
         CreateWindow createWindow = new CreateWindow("Window - created");
 
     }
-
 }
