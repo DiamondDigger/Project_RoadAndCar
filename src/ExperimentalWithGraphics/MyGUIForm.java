@@ -13,13 +13,20 @@ public class MyGUIForm extends JFrame{
         //This uses the form designer form
         add(rootPanel);
 
-        setSize(500,500);
+        setSize(400,500);
         setTitle("This is my GUI window");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        MyButton.addActionListener(new ActionListener() {
+        MyButton.addActionListener(new ActionListener() {int i = 1;
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("You've pressed the button");
+                if (i!=1) {
+                    System.out.println("You've pressed "+i+" times");
+                } else {
+                    System.out.println("You've pressed the button");
+                }
+                i++;
+                JOptionPane.showMessageDialog(rootPanel,"Yaap! You pressed the button!");
+
             }
         });
     }
