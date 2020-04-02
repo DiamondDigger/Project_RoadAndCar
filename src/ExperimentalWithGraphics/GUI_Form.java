@@ -13,6 +13,5 @@ public class GUI_Form {
                 myGUIForm.setVisible(true);
             }
         });
-
     }
 }
