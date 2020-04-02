@@ -10,6 +10,8 @@ public class MyGUIForm extends JFrame {
     private JPanel rootPanel;
     private JButton MyAnotherButton;
     private JButton theResultButton;
+    private JLabel LabelButton;
+    private JLabel LabelAnotherButton;
 
     private int count1 = 0;
     private int count2 = 0;
@@ -17,7 +19,6 @@ public class MyGUIForm extends JFrame {
     MyGUIForm() {
         //This uses the form designer form
         add(rootPanel);
-
         setSize(400, 500);
         setTitle("This is my GUI window");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -33,6 +34,7 @@ public class MyGUIForm extends JFrame {
                 } else {
                     System.out.println("You've pressed the button");
                 }
+                LabelButton.setText("Count of clicks: "+count);
                 count++;
                 count1 = count-1; // -1 because after existing it make ++
             }
@@ -49,6 +51,7 @@ public class MyGUIForm extends JFrame {
                 } else {
                     System.out.println("You've pressed another button");
                 }
+                LabelAnotherButton.setText("Count of clicks: "+count);
                 count++;
                 count2 = count-1;
             }
