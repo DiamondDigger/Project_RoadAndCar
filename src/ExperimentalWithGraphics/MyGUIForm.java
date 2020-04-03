@@ -15,6 +15,7 @@ public class MyGUIForm extends JFrame {
 
     private int count1 = 0;
     private int count2 = 0;
+    private String[] listOfResults = new String[5]; // with 5 no need capacity, may be will be fixed later
 
     MyGUIForm() {
         //This uses the form designer form
@@ -57,14 +58,17 @@ public class MyGUIForm extends JFrame {
             }
         });
 
-        theResultButton.addActionListener(new ActionListener() {int result = 0;
+        theResultButton.addActionListener(new ActionListener() {int result = 0; int countRows = 0;
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 result= count1+count2;
-                JOptionPane.showMessageDialog(theResultButton, "<<<<<<- THE RESULTS ARE ->>>>>>\n" +
+                String message ="\n<<<<<<- THE RESULTS ARE ->>>>>>\n" +
                         "button score: " + count1 + "\n" +
                         "another button score: " + count2 + "\n" +
-                        "Total SCORE: " + result);
+                        "Total SCORE: " + result;
+                JOptionPane.showMessageDialog(theResultButton, message);
+                listOfResults[countRows]=message;
+                myTextArea.append(listOfResults[countRows]);
             }
         });
     }
