@@ -30,6 +30,10 @@ public class MyGUIForm extends JFrame {
         setTitle("This is my GUI window");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+        if (flagZero1Butt && flagZero2Butt) {
+            getZero = false;
+        }
+
         ResetButton.addActionListener(new ActionListener() {
             int countOfReset = 1;
             boolean flagToZero = true;
@@ -41,8 +45,8 @@ public class MyGUIForm extends JFrame {
                 countOfReset++;
                 resetNumber = countOfReset;
                 getZero = flagToZero;
-                LabelButton.setText("Count of clicks: ");
-                LabelAnotherButton.setText("Count of clicks: ");
+                LabelButton.setText("Count of clicks: 0");
+                LabelAnotherButton.setText("Count of clicks: 0");
             }
         });
 
@@ -50,13 +54,13 @@ public class MyGUIForm extends JFrame {
             int count = 1;
             boolean flagToZero = false;
 
-
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 //                JOptionPane.showMessageDialog(rootPanel, "Yaap! You pressed the button!");
                 if (getZero) {
                     count = 0;
                     flagToZero = true;
+                    getZero =false;
                 }
 //                getZero = false;
                 if (count != 1) {
@@ -68,6 +72,7 @@ public class MyGUIForm extends JFrame {
                 count++;
                 count1 = count - 1; // -1 because after existing it make ++
                 flagZero1Butt = flagToZero;
+                flagToZero = false;
             }
         });
 
@@ -81,6 +86,7 @@ public class MyGUIForm extends JFrame {
                 if (getZero) {
                     count = 0;
                     flagToZero = true;
+                    getZero = false;
                 }
                 if (count != 1) {
                     System.out.println("You've pressed another button " + count + " times");
@@ -91,6 +97,7 @@ public class MyGUIForm extends JFrame {
                 count++;
                 count2 = count - 1;
                 flagZero2Butt = flagToZero;
+                flagToZero = false;
             }
         });
 
@@ -108,9 +115,6 @@ public class MyGUIForm extends JFrame {
                 JOptionPane.showMessageDialog(theResultButton, message);
                 listOfResults[countRows] = message;
                 myTextArea.append(listOfResults[countRows]);
-                if (flagZero1Butt&&flagZero2Butt) {
-                    getZero =false;
-                }
             }
         });
 
