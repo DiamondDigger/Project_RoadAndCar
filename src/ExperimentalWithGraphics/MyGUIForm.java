@@ -58,7 +58,7 @@ public class MyGUIForm extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
 //                JOptionPane.showMessageDialog(rootPanel, "Yaap! You pressed the button!");
                 if (getZero) {
-                    count = 0;
+                    count = 1;
                     flagToZero = true;
                     getZero =false;
                 }
@@ -84,7 +84,7 @@ public class MyGUIForm extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
 //                JOptionPane.showMessageDialog(MyAnotherButton, "All right! You pressed another button");
                 if (getZero) {
-                    count = 0;
+                    count = 1;
                     flagToZero = true;
                     getZero = false;
                 }
