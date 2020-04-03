@@ -28,7 +28,7 @@ public class MyGUIForm extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(rootPanel, "Yaap! You pressed the button!");
+//                JOptionPane.showMessageDialog(rootPanel, "Yaap! You pressed the button!");
                 if (count != 1) {
                     System.out.println("You've pressed button " + count + " times");
                 } else {
@@ -45,7 +45,7 @@ public class MyGUIForm extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(MyAnotherButton, "All right! You pressed another button");
+//                JOptionPane.showMessageDialog(MyAnotherButton, "All right! You pressed another button");
                 if (count != 1) {
                     System.out.println("You've pressed another button " + count + " times");
                 } else {
