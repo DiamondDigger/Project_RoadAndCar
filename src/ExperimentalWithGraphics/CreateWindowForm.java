@@ -3,6 +3,8 @@ package ExperimentalWithGraphics;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class CreateWindowForm extends JFrame {
     private JPanel mainPanel;
@@ -33,6 +35,13 @@ public class CreateWindowForm extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 JOptionPane.showMessageDialog(rootPanelRight, "You've pressed the right button!");
                 System.out.println("Right button");
+            }
+        });
+        rootPanelLeft.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                JOptionPane.showMessageDialog(rootPanelLeft,"You've clicked something");
             }
         });
     }
