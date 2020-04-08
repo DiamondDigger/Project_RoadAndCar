@@ -13,6 +13,8 @@ public class MyGUIForm extends JFrame {
     private JLabel LabelButton;
     private JLabel LabelAnotherButton;
     private JButton ResetButton;
+    private JRadioButton buttonRadioButton;
+    private JRadioButton anotherButtonRadioButton;
 
     private int count1 = 0;
     private int count2 = 0;
@@ -73,7 +75,7 @@ public class MyGUIForm extends JFrame {
                 count1 = count - 1; // -1 because after existing it make ++
                 flagZero1Butt = flagToZero;
                 flagToZero = false;
-            }
+           }
         });
 
         MyAnotherButton.addActionListener(new ActionListener() {

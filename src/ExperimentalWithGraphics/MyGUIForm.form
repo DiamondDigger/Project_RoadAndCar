@@ -47,14 +47,6 @@
           <text value="This is my another button"/>
         </properties>
       </component>
-      <component id="4f40f" class="javax.swing.JButton" binding="theResultButton" default-binding="true">
-        <constraints>
-          <grid row="1" column="2" row-span="3" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="The Result"/>
-        </properties>
-      </component>
       <component id="936b1" class="javax.swing.JLabel" binding="LabelButton">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -77,6 +69,30 @@
         </constraints>
         <properties>
           <text value="RESET"/>
+        </properties>
+      </component>
+      <component id="4f40f" class="javax.swing.JButton" binding="theResultButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="The Result"/>
+        </properties>
+      </component>
+      <component id="3eec1" class="javax.swing.JRadioButton" binding="buttonRadioButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Button"/>
+        </properties>
+      </component>
+      <component id="a15c" class="javax.swing.JRadioButton" binding="anotherButtonRadioButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Another Button"/>
         </properties>
       </component>
     </children>
