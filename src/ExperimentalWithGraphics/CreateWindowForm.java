@@ -1,6 +1,7 @@
 package ExperimentalWithGraphics;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -14,6 +15,7 @@ public class CreateWindowForm extends JFrame {
     private JButton RIGHTButton;
     private JTextArea textArea1;
     private JTextArea textArea2;
+    private Cursor cursor;
 
     CreateWindowForm(){
         add(mainPanel);
@@ -21,6 +23,7 @@ public class CreateWindowForm extends JFrame {
         setTitle("Your main window");
         add(rootPanelRight);
         add(rootPanelLeft);
+        setCursor(1);
 
 
         LEFTButton.addActionListener(new ActionListener() {
@@ -37,7 +40,8 @@ public class CreateWindowForm extends JFrame {
                 System.out.println("Right button");
             }
         });
-        rootPanelLeft.addMouseListener(new MouseAdapter() {
+
+        textArea1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
