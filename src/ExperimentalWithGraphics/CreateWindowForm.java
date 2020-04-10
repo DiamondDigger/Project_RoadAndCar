@@ -53,14 +53,16 @@ public class CreateWindowForm extends JFrame {
                 System.out.println("textArea1.getLineCount(): " + textArea1.getLineCount());
                 // erase window
 
-                if (textArea1.getLineCount()>10){
+                if (textArea1.getLineCount()>15){
                     textArea1.selectAll();
-                    textArea1.setText("loading...");
+                    textArea1.setText("...");
+                    clicks=1;
                 }
-                    textArea1.cut();
 
                 // add some text messages by the clicking
                 if (clicks == 1) {
+//                    textArea1.getSelectedText();
+//                    textArea1.setText("");
                     textArea1.append("\nHello, I'm John - your consultant.\n");
                 } else if (clicks == 2) {
                     textArea1.append("\nHow can I help ?\n");
