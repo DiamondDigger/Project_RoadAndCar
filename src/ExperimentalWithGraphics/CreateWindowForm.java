@@ -53,10 +53,9 @@ public class CreateWindowForm extends JFrame {
                 System.out.println("textArea1.getLineCount(): " + textArea1.getLineCount());
                 // erase window
 
-                if (textArea1.getLineCount()>8){
-                    textArea1.setCursor(Cursor.getDefaultCursor());
-                    textArea1.setVisible(false);
-                    add(rootPanelRight);
+                if (textArea1.getLineCount()>10){
+                    textArea1.selectAll();
+                    textArea1.setText("loading...");
                 }
                     textArea1.cut();
 
