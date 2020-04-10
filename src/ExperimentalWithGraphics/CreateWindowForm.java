@@ -51,6 +51,9 @@ public class CreateWindowForm extends JFrame {
                 super.mouseClicked(e);
 //                JOptionPane.showMessageDialog(rootPanelLeft,"You've clicked something");
                 System.out.println("textArea1.getLineCount(): " + textArea1.getLineCount());
+                // erase window
+
+                // add some text messages by the clicking
                 if (clicks == 1) {
                     textArea1.append("\nHello, I'm John - your consultant.\n");
                 } else if (clicks == 2) {
@@ -58,6 +61,8 @@ public class CreateWindowForm extends JFrame {
                 } else {
                     textArea1.append("\nPrint down your question or request, please.\n");
                 }
+
+
                 countOfClicks = ++clicks;
             }
 
