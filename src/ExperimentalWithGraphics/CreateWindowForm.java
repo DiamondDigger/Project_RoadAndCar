@@ -10,7 +10,6 @@ import java.awt.event.MouseEvent;
 public class CreateWindowForm extends JFrame {
     private JPanel mainPanel;
     private JPanel rootPanelLeft;
-    private JPanel rootPanelRight;
     private JButton LEFTButton;
     private JButton RIGHTButton;
     private JTextArea textArea1;
@@ -22,7 +21,6 @@ public class CreateWindowForm extends JFrame {
         add(mainPanel);
         setSize(800, 400);
         setTitle("Your main window");
-        add(rootPanelRight);
         add(rootPanelLeft);
         setCursor(1);
 
@@ -37,7 +35,7 @@ public class CreateWindowForm extends JFrame {
         RIGHTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(rootPanelRight, "You've pressed the right button!");
+                JOptionPane.showMessageDialog(rootPanelLeft, "You've pressed the right button!");
                 System.out.println("Right button");
             }
         });

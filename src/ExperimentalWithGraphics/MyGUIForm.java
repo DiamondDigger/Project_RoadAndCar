@@ -62,9 +62,12 @@ public class MyGUIForm extends JFrame {
                 if (getZero) {
                     count = 1;
                     flagToZero = true;
-                    getZero =false;
+//                    getZero =false;
                 }
 //                getZero = false;
+                if (flagToZero) {
+                    count=0;
+                }
                 if (count != 1) {
                     System.out.println("You've pressed button " + count + " times");
                 } else {
@@ -88,8 +91,12 @@ public class MyGUIForm extends JFrame {
                 if (getZero) {
                     count = 1;
                     flagToZero = true;
-                    getZero = false;
+//                    getZero = false;
                 }
+                if (flagToZero) {
+                    count=0;
+                }
+
                 if (count != 1) {
                     System.out.println("You've pressed another button " + count + " times");
                 } else {
